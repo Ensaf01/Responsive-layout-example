@@ -1,0 +1,77 @@
+.header, .nav, .sidebar, .main, .advertise, footer{
+    background-color: brown;
+    padding: 15px;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+.header{
+    grid-area: header;
+}
+.nav{
+    grid-area: nav;
+}
+.main{
+    grid-area: main;
+}
+.advertise{
+    grid-area: advertise;
+}
+.sidebar{
+    grid-area: sidebbr;
+}
+.footer{
+    grid-area: footer;
+}
+.body-container{
+    display: grid;
+    gap:20px;
+    grid-template-areas:
+  
+    "header header header header "
+    "nav    main    main  sidebar"
+    "nav    main    main  advertise"
+    "footer footer  footer footer"
+    ;
+}
+/* small device */
+@media screen and (max-width:576px) {
+    .body-container{
+        grid-template-areas: 
+        "header"
+       
+        "nav"
+        "main"
+        "sidebar"
+    
+        "advertise"
+        "footer"
+        /*double quation er modhe je name gula ache
+        se gualake jodi amra ulaplata kore dey thole sey vabe soto
+        device dekhabe ,it is depend on your sequence,ay vabe column kore dekhabe soto device a,so it is the simple thing that
+        how do you want ,and how to show on your device   */
+        
+        ;
+    }
+   
+    
+}
+ /* medium device */
+
+ @media screen and (min-width:576px) and (max-width:992px) {
+    .body-container{
+        grid-template-areas: 
+        "header   header  header "
+        "nav      nav     nav"
+        "sidebar  main    main"
+        "advertise  footer  footer"
+       
+        /*double qutaion er modhe je name gula ache
+        se gualake jodi amra ulaplata kore dey thole sey vabe medium
+        device dekhabe ,it is depend on your sequence   */
+        
+        ;
+    }
+   
+    
+    
+ }
